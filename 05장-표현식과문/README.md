@@ -130,7 +130,7 @@
     // 개발자의 예측 => return {};
   }
 
-  console.log(foo{}); // undefined 
+  console.log(foo()); // undefined 
 
   var bar = function () {}
   (function() {})();
@@ -138,3 +138,11 @@
   // 개발자의 예측 => var bar = function (){}; (function() {})();
   // TypeError: (intermediate value)( ... ) is not a function
   ```
+
+## 5.6 표현식인 문과 표현식이 아닌 문
+표현식인 문은 값으로 평가될 수 있는 문이며,   
+표현식이 아닌 문은 값으로 평가될 수 없는 문을 말한다.   
+구별하는 방법 :  변수에 할당해 보기 
+```js
+  var foo = var x; // SyntaxError
+```
