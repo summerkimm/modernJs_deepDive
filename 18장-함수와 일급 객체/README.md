@@ -203,6 +203,8 @@ console.log(obj.__proto__ === Object.prototype); // true
 // hasOwnPropery 메서드는 Object.prototype의 메서드다.
 console.log(obj.hasOwnProperty("a")); // true
 console.log(obj.hasOwnProperty("__proto__")); // false
+
+console.log(Object.prototype.hasOwnProperty("__proto__")); // true
 ```
 
 **`hasOwnProperty` 메서드**  
