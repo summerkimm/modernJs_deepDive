@@ -105,7 +105,7 @@ console.log(multiply(1, 2, 3)); // 2
 - arguments 객체의 프로퍼티 키는 인수의 순서, 프로퍼티 값은 인수.  
 - arguments 객체의 `callee` 프로퍼티는 함수 자신(=호출되어 arguments 객체를 생성한 함수)  
 - arguments 객체의 `length` 프로퍼티는 인수의 개수
-- arguments 객체의 `Symbol(Symbol.iterator)` 프로퍼티는 arguments 객체를 **순회 가능한 자료구조인 이터러블(iterable)**로 만들기 위한 프로퍼티(34장 이터러블 참고)
+- arguments 객체의 `Symbol(Symbol.iterator)` 프로퍼티는 arguments 객체를 순회 가능한 자료구조인 이터러블(iterable)로 만들기 위한 프로퍼티(34장 이터러블 참고)
 
 #### arguments 객체는 매개변수 개수를 확정할 수 없는 `가변 인자 함수`를 구현할 때 유용
 
@@ -203,6 +203,8 @@ console.log(obj.__proto__ === Object.prototype); // true
 // hasOwnPropery 메서드는 Object.prototype의 메서드다.
 console.log(obj.hasOwnProperty("a")); // true
 console.log(obj.hasOwnProperty("__proto__")); // false
+
+console.log(Object.prototype.hasOwnProperty("__proto__")); // true
 ```
 
 **`hasOwnProperty` 메서드**  
